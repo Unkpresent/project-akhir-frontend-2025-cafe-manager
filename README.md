@@ -1,16 +1,60 @@
-# React + Vite
+# Aplikasi Inventaris Gudang (Inventory App)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi manajemen stok sederhana yang dibangun menggunakan **React (Vite)** dan **JSON Server** sebagai simulasi backend REST API. Aplikasi ini menerapkan operasi CRUD (Create, Read, Update, Delete) lengkap.
 
-Currently, two official plugins are available:
+## 🛠 Teknologi yang Digunakan
+- **Frontend:** React.js + Vite
+- **Styling:** Tailwind CSS
+- **Backend Simulation:** JSON Server
+- **HTTP Client:** Axios
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📊 Hierarki Komponen
 
-## React Compiler
+Berikut adalah diagram struktur komponen aplikasi ini:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Diagram Hierarki Komponen](./diagram.png)
 
-## Expanding the ESLint configuration
+*Gambar di atas merepresentasikan alur data dari App.jsx ke komponen-komponen kecil.*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Cara Menjalankan Aplikasi
+
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi di komputer lokal:
+
+### 1. Install Dependensi
+Buka terminal di folder project dan jalankan:
+```bash
+npm install
+2. Jalankan Server & Aplikasi
+Aplikasi ini membutuhkan dua terminal yang berjalan bersamaan (Satu untuk Backend, satu untuk Frontend).
+
+Terminal 1 (Backend - JSON Server):
+
+Bash
+
+npm run server
+Server akan berjalan di http://localhost:3000
+
+Terminal 2 (Frontend - React):
+
+Bash
+
+npm run dev
+Aplikasi akan berjalan di http://localhost:5173
+
+📝 Fitur
+GET: Menampilkan daftar barang dari database.
+
+POST: Menambah barang baru ke inventaris.
+
+PUT: Mengubah data barang (Edit).
+
+DELETE: Menghapus barang dari inventaris.
+
+
+### Langkah Selanjutnya
+Setelah menempelkan kode di atas, jangan lupa jalankan perintah ini di terminal agar perubahan tersimpan dan terkirim ke GitHub:
+
+```bash
+git add README.md
+git commit -m "Update README dengan diagram visual"
+git push origin development
